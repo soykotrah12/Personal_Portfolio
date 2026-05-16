@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soykot Rahman Rodro | Flutter Developer & Mobile App Specialist</title>
+    <meta name="description" content="Professional portfolio of Soykot Rahman Rodro - Flutter Developer, Mobile App Developer, and UI/UX Enthusiast.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand': '#00ffc4',
+                        'brand-dark': '#047857',
+                        'bg-primary': '#050505',
+                        'bg-secondary': '#0a0a0a',
+                        'bg-card': '#171717',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'monospace'],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#hero" class="flex items-center gap-2 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand to-brand-dark flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <span class="text-black font-bold text-lg">S</span>
+                    </div>
+                    <span class="text-xl font-semibold text-white">Soykot</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#about" class="nav-link" data-section="about">About</a>
+                    <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                    <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+                    <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                    <a href="#services" class="nav-link" data-section="services">Services</a>
+                    <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="#contact" class="btn-shine btn-primary">
+                        <span>Hire Me</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-white">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="#about" class="mobile-nav-link" data-section="about">About</a>
+            <a href="#skills" class="mobile-nav-link" data-section="skills">Skills</a>
+            <a href="#experience" class="mobile-nav-link" data-section="experience">Experience</a>
+            <a href="#projects" class="mobile-nav-link" data-section="projects">Projects</a>
+            <a href="#services" class="mobile-nav-link" data-section="services">Services</a>
+            <a href="#contact" class="mobile-nav-link" data-section="contact">Contact</a>
+            <a href="#contact" class="btn-shine btn-primary btn-mobile-cta">
+                <span>Hire Me</span>
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+        </div>
+        <button id="close-menu" class="mobile-close-btn">
+            <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg-effects">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-32 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="hero-content">
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Available for opportunities</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Soykot Rahman Rodro</span>
+                    </h1>
+                    
+                    <div class="hero-subtitle">
+                        <span>Flutter Developer</span>
+                        <span class="text-brand">•</span>
+                        <span>Mobile App Specialist</span>
+                    </div>
+                    
+                    <p class="hero-description">
+                        Crafting beautiful, high-performance mobile applications with Flutter. Currently building innovative solutions at <span class="highlight">ScaleUp Ads Agency</span>. Passionate about clean code and exceptional user experiences.
+                    </p>
+                    
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn-shine btn-primary">
+                            <span>View Projects</span>
+                            <i data-lucide="folder-open" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#contact" class="btn-outline">
+                            <span>Contact Me</span>
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="btn-ghost">
+                            <span>Download CV</span>
+                            <i data-lucide="download" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="social-links" id="hero-social-links">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+                
+                <!-- Hero Visual -->
+                <div class="hero-visual">
+                    <div class="profile-rings">
+                        <div class="ring ring-outer"></div>
+                        <div class="ring ring-inner"></div>
+                    </div>
+                    
+                    <div class="profile-container">
+                        <img src="https://picsum.photos/seed/soykot-dev/400/400.jpg" alt="Soykot Rahman Rodro" class="profile-image">
+                        
+                        <div class="floating-badge badge-top-right">
+                            <i data-lucide="smartphone" class="w-8 h-8 text-brand"></i>
+                        </div>
+                        <div class="floating-badge badge-bottom-left">
+                            <i data-lucide="code-2" class="w-8 h-8 text-brand"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-brand"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- About Image -->
+                <div class="reveal about-image-wrapper">
+                    <div class="about-image-container">
+                        <div class="about-image-bg"></div>
+                        <div class="about-image-main">
+                            <img src="https://picsum.photos/seed/developer-work/600/700.jpg" alt="Developer at work" class="about-image">
+                            <div class="about-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">1+</span>
+                                    <span class="stat-label">Years Exp.</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">10+</span>
+                                    <span class="stat-label">Projects</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">5+</span>
+                                    <span class="stat-label">Clients</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- About Content -->
+                <div class="reveal about-content">
+                    <div class="section-label">
+                        <span class="label-line"></span>
+                        <span class="label-text">About Me</span>
+                    </div>
+                    
+                    <h2 class="section-title">
+                        Passionate About Building <span class="gradient-text">Digital Experiences</span>
+                    </h2>
+                    
+                    <div class="about-text" id="about-text">
+                        <!-- Populated by JS -->
+                    </div>
+                    
+                    <div class="about-info" id="about-info">
+                        <!-- Populated by JS -->
+                    </div>
+                    
+                    <div class="about-actions">
+                        <a href="#contact" class="btn-shine btn-primary btn-sm">
+                            <span>Let's Talk</span>
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="btn-outline btn-sm">
+                            <span>Download CV</span>
+                            <i data-lucide="download" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="skills-bg-effects">
+            <div class="grid-pattern"></div>
+            <div class="glow-effect glow-1"></div>
+            <div class="glow-effect glow-2"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+            <!-- Section Header -->
+            <div class="section-header reveal">
+                <div class="section-label">
+                    <span class="label-line"></span>
+                    <span class="label-text">My Skills</span>
+                    <span class="label-line"></span>
+                </div>
+                <h2 class="section-title">
+                    Interactive <span class="gradient-text">Tech Universe</span>
+                </h2>
+                <p class="section-subtitle">
+                    Explore my technical galaxy - each planet represents a skill I've mastered. Hover over any planet to discover more.
+                </p>
+            </div>
+            
+            <!-- Solar System -->
+            <div class="reveal">
+                <div class="solar-system-container" id="solar-system">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+            
+            <!-- Skill Cards -->
+            <div class="skill-cards-grid reveal" id="skill-cards">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="section-header reveal">
+                <div class="section-label">
+                    <span class="label-line"></span>
+                    <span class="label-text">Experience</span>
+                    <span class="label-line"></span>
+                </div>
+                <h2 class="section-title">
+                    Professional <span class="gradient-text">Journey</span>
+                </h2>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <!-- Timeline -->
+                <div class="reveal timeline-wrapper" id="experience-timeline">
+                    <!-- Populated by JS -->
+                </div>
+                
+                <!-- Education -->
+                <div class="reveal education-wrapper" id="education-section">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="projects-bg-pattern"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+            <div class="section-header reveal">
+                <div class="section-label">
+                    <span class="label-line"></span>
+                    <span class="label-text">Projects</span>
+                    <span class="label-line"></span>
+                </div>
+                <h2 class="section-title">
+                    Featured <span class="gradient-text">Works</span>
+                </h2>
+            </div>
+            
+            <div class="projects-grid reveal" id="projects-grid">
+                <!-- Populated by JS -->
+            </div>
+            
+            <div class="projects-cta reveal">
+                <a href="https://github.com/soykotrah12" target="_blank" class="btn-shine btn-primary">
+                    <span>View All Projects</span>
+                    <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="section-header reveal">
+                <div class="section-label">
+                    <span class="label-line"></span>
+                    <span class="label-text">Services</span>
+                    <span class="label-line"></span>
+                </div>
+                <h2 class="section-title">
+                    What I <span class="gradient-text">Offer</span>
+                </h2>
+            </div>
+            
+            <div class="services-grid reveal" id="services-grid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-bg-effect"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+            <div class="section-header reveal">
+                <div class="section-label">
+                    <span class="label-line"></span>
+                    <span class="label-text">Contact</span>
+                    <span class="label-line"></span>
+                </div>
+                <h2 class="section-title">
+                    Let's Work <span class="gradient-text">Together</span>
+                </h2>
+            </div>
+            
+            <div class="grid lg:grid-cols-5 gap-12">
+                <!-- Contact Info -->
+                <div class="lg:col-span-2 reveal contact-info-wrapper" id="contact-info">
+                    <!-- Populated by JS -->
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="lg:col-span-3 reveal">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email">Your Email</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required class="form-input">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required class="form-input form-textarea"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-shine btn-primary btn-submit">
+                            <span>Send Message</span>
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon">S</span>
+                        <span class="logo-text">Soykot Rahman Rodro</span>
+                    </div>
+                </div>
+                <p class="footer-copyright">
+                    © 2024 Soykot Rahman Rodro. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="data/portfolioData.js"></script>
+    <script src="js/scrollSpy.js"></script>
+    <script src="js/solarSystem.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/formHandler.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

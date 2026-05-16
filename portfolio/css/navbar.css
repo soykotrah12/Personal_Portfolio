@@ -1,0 +1,117 @@
+/* ==========================================
+   NAVBAR STYLES
+   ========================================== */
+
+#navbar {
+    background: transparent;
+}
+
+#navbar.scrolled {
+    background: rgba(5, 5, 5, 0.9);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Nav Links */
+.nav-link {
+    position: relative;
+    padding-bottom: 0.25rem;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-brand), var(--color-brand-dark));
+    transition: width 0.3s ease;
+    border-radius: 1px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--color-text-primary);
+}
+
+.nav-link.active {
+    color: var(--color-brand);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-modal);
+    background: rgba(5, 5, 5, 0.95);
+    backdrop-filter: blur(20px);
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.open {
+    transform: translateX(0);
+}
+
+.mobile-menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 2rem;
+}
+
+.mobile-nav-link {
+    font-size: var(--text-2xl);
+    color: var(--color-text-primary);
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.mobile-nav-link.active {
+    color: var(--color-brand);
+}
+
+.mobile-nav-link::before {
+    content: '';
+    position: absolute;
+    left: -1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--color-brand);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-nav-link.active::before {
+    opacity: 1;
+}
+
+.mobile-close-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-primary);
+}
+
+.btn-mobile-cta {
+    margin-top: 1rem;
+}
